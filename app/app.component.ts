@@ -10,6 +10,8 @@ import {Component} from '@angular/core';
   </nav>
   <router-outlet></router-outlet>
   <hr>
+  <app-title [subtitle]="subtitle"></app-title>
+  <app-contact></app-contact>
 `,
   styleUrls: ['app/app.component.css'],
 })
