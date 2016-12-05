@@ -9,10 +9,12 @@ import {Component} from '@angular/core';
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
   <router-outlet></router-outlet>
+  <hr>
 `,
   styleUrls: ['app/app.component.css'],
 })
-
+// <app-title [subtitle='subtitle']></app-title>
 export class AppComponent {
   title = 'Tour of Heroes';
+  subtitle = '(v1)';
 }
