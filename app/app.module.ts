@@ -14,11 +14,18 @@ import { DashboardComponent }   from './dashboard.component';
 import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroesComponent }      from './heroes.component';
 import { HeroService }          from './hero.service';
+import { UserService }          from './user.service';
 import { AppRoutingModule }     from './app-routing.module';
+import { HighlightDirective as ContactHighlightDirective } from './contact/highlight.directive';
+// import { AwesomePipe } from './contact/awesome.pipe';
+// import { ContactComponent } from './contact/contact.component';
 // import { HeroSearchService } from "./hero-search.service";
 import { HeroSearchComponent } from './hero-search.component';
 import { HighlightDirective } from './highlight.directive';
 import { TitleComponent } from './title.component';
+import {AwesomePipe} from "./contact/awesome.pipe";
+import {ContactComponent} from "./contact/contact.component";
+import {ContactService} from "./contact/contact.service";
 
 @NgModule({
   imports: [
@@ -35,9 +42,16 @@ import { TitleComponent } from './title.component';
     HeroesComponent,
     HeroSearchComponent,
     TitleComponent,
-    HighlightDirective
+    HighlightDirective,
+    AwesomePipe,
+    ContactComponent,
+    ContactHighlightDirective
   ],
-  providers: [ HeroService ],
+  providers: [
+    HeroService,
+    UserService,
+    ContactService
+  ],
   bootstrap: [ AppComponent ]
 })
 
